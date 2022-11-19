@@ -1,6 +1,6 @@
 const bootstrap = (input_number: number) =>
 
-    console.log(`app started`);
+    console.log(`app started ${input_number}`);
 
 
 
