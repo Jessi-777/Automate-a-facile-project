@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo TODO",
-    "clean": "rimraf -f build/ && rimraf -f docs/",
+    "clean": "rimraf -f build/ && rimraf -f docs/ && mkdir docs",
     "typescript": "tsc --build tsconfig.json",
-    "build": "npm run clean && npm run typescript"
+    "make_site": "cp build/ts/index.js docs/index.js && cp -r src/html/* docs/",
+    "build": "npm run clean && npm run typescript && npm run make_site"
   },
   "repository": {
     "type": "git",
